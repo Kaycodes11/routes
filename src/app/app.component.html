@@ -1,0 +1,54 @@
+<!-- <h2>My App</h2> -->
+<!-- where these route will be located/placed? seems like within app.. so put it here -->
+<!-- <router-outlet></router-outlet>
+<app-login></app-login>
+<app-dashboard></app-dashboard> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <button (click)="onLogin()">Login</button>
+      <button style="margin-left: 4px" (click)="onLogOut()">LogOut</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <ul class="nav flex-column nav-pills">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/users" routerLinkActive="active"
+            >Users</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/categories']"
+            routerLinkActive="active"
+            >Categories</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col md-12">
+          <!-- it will only load that component and its cchild components
+            whoose route has entered within browser and element/component outside router-oulet
+          will be show on every pages -->
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

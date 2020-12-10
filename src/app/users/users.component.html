@@ -1,0 +1,40 @@
+<!-- <div>Users component</div>
+
+<div>
+  <button class="btn btn-secondary" (click)="onCategoriesClick()">
+    Go to categories
+  </button>
+</div>
+
+<a
+  [routerLink]="['/users', 1, 'Lily']"
+  [queryParams]="{ page: 1, search: 'searching' }"
+  [fragment]="'load'"
+  >get lily user details</a
+>
+
+ -->
+
+<ul class="nav flex-column">
+  <li class="nav-item">
+    <a
+      [routerLink]="['/users', 1, 'jey']"
+      [queryParams]="{ page: 1, search: 'jey' }"
+      [queryParamsHandling]="'preserve'"
+      class="nav-link"
+      >Get Jey Details</a
+    >
+  </li>
+  <li class="nav-item">
+    <a
+      [routerLink]="['/users', 2, 'joe']"
+      [queryParams]="{ page: 2, search: 'joe' }"
+      class="nav-link"
+      >Get Joe Details</a
+    >
+  </li>
+</ul>
+
+<div>
+  <router-outlet></router-outlet>
+</div>
